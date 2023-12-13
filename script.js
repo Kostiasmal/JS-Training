@@ -153,7 +153,7 @@ let message = (login == "Працівник") ? "Привіт" :
 ---
 
 
-/*    2.11 t9    */
+/*    2.11 t9    */ /*
 
 
 let login = prompt("Хто там?")
@@ -220,7 +220,7 @@ while (i<3) {
 }
 
 
-/*    2.13 t6    */
+/*    2.13 t6    *//*
 
 
 while (true) {
@@ -229,6 +229,11 @@ while (true) {
     break;
     }
 
+    let num 
+    do {
+    
+        num = prompt("Число яке Ви ввели більше за 100?");
+    } while (num<=100 && num);
 
 /*    2.13 t7    *//*
 
@@ -236,7 +241,7 @@ while (true) {
 ---
 
 
-/*    2.14 t1    */
+/*    2.14 t1    *//*
 
 
 if (browser == "Edge") {
@@ -253,7 +258,7 @@ if (browser == "Edge") {
 
 /*    2.14 t2    */
 
-
+/*
 let a = +prompt("a?","");
 switch (a) {
     
@@ -269,3 +274,78 @@ switch (a) {
         alert( "2,3" );
         break;
     }
+    */
+
+
+/*    2.15 t1    *//*
+
+
+Немає різниці
+
+
+/*    2.15 t2    */ 
+
+/*    З використанням тернарного оператора "?"    *//*
+
+
+function checkAge(age){
+    return (age > 18) ? true : confirm ("Батьки дозволили?");
+}
+
+
+/*    З використанням оператора "Або ||"    *//*
+
+
+function checkAge(age){
+    return (age > 18) || confirm ("Батьки дозволили?");
+}
+
+
+/*    2.15 t3    *//*
+
+
+function min(a, b){
+    if (a < b) {
+    return a;
+    } else {
+    return b;
+    }
+}
+
+
+/*    2.15 t4    *//*
+
+
+function pow(x, n) {
+    let result = x;
+    for(let i = 1; i < n; i++){
+        result *= x;
+    }
+    return result;
+}
+
+let x = prompt ("Введіть перше число:","")
+let n = prompt ("Введіть друше число:","")
+
+if ( n < 1 ) {
+    alert ("Степінь не підтримується!");
+
+    }else{
+     alert (pow (x, n));
+    
+}
+
+/*    2.17 t1    */
+
+
+let ask = (question, yes, no) => {
+  if (confirm(question)) yes();
+  else no();
+}
+
+ask(
+    "Ви згодні?",
+   () => alert("Ви погодидись."),
+   () => alert("Ви скасували виконання.")
+);
+
